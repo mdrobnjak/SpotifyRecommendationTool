@@ -27,9 +27,9 @@ namespace SpotifyRecommendationEngine
 
             InitControls();
 
-            InitDataGridView(ref dgvSeeds);
-            InitDataGridView(ref dgvRecos);
-            InitDataGridView(ref dgvTuneable);
+            InitDgvForTrackData(ref dgvSeeds);
+            InitDgvForTrackData(ref dgvRecos);
+            InitDgvForTrackData(ref dgvTuneable);
         }
 
         #region Spotify API
@@ -82,10 +82,14 @@ namespace SpotifyRecommendationEngine
 
         private void InitControls()
         {
-            btnSearch.BackColor = Color.LightGreen;
+            btnShowRecos.BackColor = Color.LightGreen;
         }
 
-        private void InitDataGridView(ref DataGridView dgv)
+        /// <summary>
+        /// Initialize the DataGridView to display track data. The ValueType of each column is stored in the Tag property.
+        /// </summary>
+        /// <param name="dgv"></param>
+        private void InitDgvForTrackData(ref DataGridView dgv)
         {
             dgv.Font = new Font("Courier New", 12, FontStyle.Bold);
             dgv.AllowUserToResizeColumns = true;
@@ -98,6 +102,7 @@ namespace SpotifyRecommendationEngine
             columnHeaderStyle.Font = dgv.Font;
             dgv.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
 
+            
             dgv.Columns.Add(new DataGridViewTextBoxColumn() { Name = "Title", Tag = "".GetType() });
             dgv.Columns.Add(new DataGridViewTextBoxColumn() { Name = "Artist", Tag = "".GetType() });
             dgv.Columns.Add(new DataGridViewTextBoxColumn() { Name = "Genre", Tag = "".GetType() });
@@ -125,9 +130,9 @@ namespace SpotifyRecommendationEngine
             dgv.Columns.Add(new DataGridViewTextBoxColumn() { Name = "ArtistId", Tag = "".GetType(), Visible = false });
         }
         
-        private async void btnSearch_Click(object sender, EventArgs e)
+        private async void btnShowRecos_Click(object sender, EventArgs e)
         {
-            btnSearch.Enabled = false;
+            btnShowRecos.Enabled = false;
 
             if (auth == null)
             {
@@ -144,7 +149,7 @@ namespace SpotifyRecommendationEngine
             GetRecommendations(dgvSeeds, dgvRecos);
             GetAudioFeatures(dgvRecos);
 
-            btnSearch.Enabled = true;
+            btnShowRecos.Enabled = true;
         }
 
         private void GetTrackAttributes(DataGridView dgv)
@@ -201,11 +206,7 @@ namespace SpotifyRecommendationEngine
                 }
             }
         }
-
-        /// <summary>
-        /// Gets select audio features for the tracks in a DataGridView.
-        /// </summary>
-        /// <param name="dgv"></param>
+        
         private async void GetAudioFeatures(DataGridView dgv)
         {
             List<string> ids = dgv.Columns["TrackId"].GetUniqueValues();

@@ -30,7 +30,7 @@
         {
             this.dgvSeeds = new System.Windows.Forms.DataGridView();
             this.dgvRecos = new System.Windows.Forms.DataGridView();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnShowRecos = new System.Windows.Forms.Button();
             this.dgvTuneable = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSeeds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecos)).BeginInit();
@@ -62,14 +62,14 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.Location = new System.Drawing.Point(748, 143);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(149, 68);
-            this.btnSearch.TabIndex = 4;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.btnShowRecos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnShowRecos.Location = new System.Drawing.Point(748, 143);
+            this.btnShowRecos.Name = "btnSearch";
+            this.btnShowRecos.Size = new System.Drawing.Size(149, 68);
+            this.btnShowRecos.TabIndex = 4;
+            this.btnShowRecos.Text = "Search";
+            this.btnShowRecos.UseVisualStyleBackColor = true;
+            this.btnShowRecos.Click += new System.EventHandler(this.btnShowRecos_Click);
             // 
             // dgvTuneables
             // 
@@ -90,7 +90,7 @@
             this.Controls.Add(this.dgvSeeds);
             this.Controls.Add(this.dgvTuneable);
             this.Controls.Add(this.dgvRecos);
-            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.btnShowRecos);
             this.Name = "MainForm";
             this.Text = "Spotify Recommendation Engine";
             ((System.ComponentModel.ISupportInitialize)(this.dgvSeeds)).EndInit();
@@ -103,7 +103,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvSeeds;
-        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnShowRecos;
         private System.Windows.Forms.DataGridView dgvRecos;
         private System.Windows.Forms.DataGridView dgvTuneable;
     }
