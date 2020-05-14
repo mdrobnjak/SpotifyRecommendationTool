@@ -1,2 +1,2 @@
-# SpotifyRecommendationEngine
+# SpotifyRecommendationTool
  UI useful for DJs

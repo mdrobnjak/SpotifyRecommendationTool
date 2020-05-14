@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpotifyRecommendationEngine", "SpotifyRecommendationEngine\SpotifyRecommendationEngine.csproj", "{9EF18DD2-2B84-4214-BA43-B5DA88B96F20}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpotifyRecommendationTool", "SpotifyRecommendationTool\SpotifyRecommendationTool.csproj", "{9EF18DD2-2B84-4214-BA43-B5DA88B96F20}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpotifyAPI.Web", "SpotifyAPI-NET\SpotifyAPI.Web\SpotifyAPI.Web.csproj", "{8BC4C376-1E9E-426E-9292-F3EEEED358D0}"
 EndProject

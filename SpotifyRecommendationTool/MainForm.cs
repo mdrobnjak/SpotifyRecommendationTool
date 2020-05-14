@@ -14,7 +14,7 @@ using SpotifyAPI.Web.Auth;
 using SpotifyAPI.Web.Enums;
 using SpotifyAPI.Web.Models;
 
-namespace SpotifyRecommendationEngine
+namespace SpotifyRecommendationTool
 {
     public partial class MainForm : Form
     {

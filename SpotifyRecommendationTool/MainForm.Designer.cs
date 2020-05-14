@@ -1,4 +1,4 @@
-﻿namespace SpotifyRecommendationEngine
+﻿namespace SpotifyRecommendationTool
 {
     partial class MainForm
     {

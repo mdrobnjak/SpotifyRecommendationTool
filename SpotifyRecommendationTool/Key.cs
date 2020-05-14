@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SpotifyRecommendationEngine
+namespace SpotifyRecommendationTool
 {
     public static class Key
     {
