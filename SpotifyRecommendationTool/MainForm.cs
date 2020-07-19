@@ -18,6 +18,8 @@ namespace SpotifyRecommendationTool
 {
     public partial class MainForm : Form
     {
+        const int RecommendationsPerRequest = 100;
+
         SpotifyWebAPI api;
         AuthorizationCodeAuth auth;
 
@@ -284,7 +286,7 @@ namespace SpotifyRecommendationTool
                 target: target,
                 min: null,
                 max: null,
-                limit: 20);
+                limit: RecommendationsPerRequest);
 
             foreach (var track in recos.Tracks)
             {
